@@ -65,17 +65,17 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         <div className="flex flex-row justify-between mt-4 text-sm">
           <div>
             {' '}
-            <a href="https://workers.cloudflare.com/" target="_blank">
+            <a href="https://ronkkeli.com" target="_blank">
               {' '}
             </a>
             {' '}
-            <a href="https://flareact.com/" target="_blank">
+            <a href="https://ronkkeli.com" target="_blank">
               {' '}
             </a>
           </div>
           <div>
             <a
-              href="https://github.com/eidam/cf-workers-status-page"
+              href="https://ronkkeli.com"
               target="_blank"
             >
               
