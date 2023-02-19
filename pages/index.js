@@ -32,7 +32,6 @@ export async function getEdgeProps() {
       kvMonitors: kvMonitors ? kvMonitors.monitors : {},
       kvMonitorsLastUpdate: kvMonitors ? kvMonitors.lastUpdate : {},
     },
-    // Revalidate these props once every x seconds
     revalidate: 5,
   }
 }
