@@ -47,10 +47,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
             <img className="h-8 w-auto" src={config.settings.logo} />
             <h1 className="ml-4 text-3xl">{config.settings.title}</h1>
           </div>
-          <div className="flex flex-row items-center">
-            {typeof window !== 'undefined' && <ThemeSwitcher />}
-            <MonitorFilter active={slash} callback={filterByTerm} />
-          </div>
+          
         </div>
         <MonitorStatusHeader kvMonitorsLastUpdate={kvMonitorsLastUpdate} />
         {state.visible.map((monitor, key) => {
