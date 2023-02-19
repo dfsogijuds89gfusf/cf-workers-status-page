@@ -94,7 +94,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
             <a href="https://workers.cloudflare.com/" target="_blank">
               {' '}
             </a>
-            &{' '}
+            {' '}
             <a href="https://flareact.com/" target="_blank">
               {' '}
             </a>
