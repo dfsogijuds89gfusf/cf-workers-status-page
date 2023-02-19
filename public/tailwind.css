@@ -3,9 +3,12 @@
 @tailwind utilities;
 
 
+
+
 @layer base {
   body {
     @apply bg-black text-gray-500 dark:bg-black dark:text-gray-800;
+    background-color: black;
   }
 
   a {
