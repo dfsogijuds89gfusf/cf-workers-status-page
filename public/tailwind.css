@@ -51,7 +51,10 @@
   .bar.yellow {
     @apply bg-yellow-400 dark:bg-yellow-700;
   }
-
+  .h-5 mx-auto {
+    display: none
+     
+  }
   .tooltip {
     @apply relative;
   }
