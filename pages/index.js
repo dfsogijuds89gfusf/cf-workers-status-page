@@ -48,11 +48,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         <link rel="stylesheet" href="./style.css" />
         <script>
           {`
-          function setTheme(theme) {
-            document.documentElement.classList.remove("dark", "light")
-            document.documentElement.classList.add(theme)
-            localStorage.theme = theme
-          }
+         
           (() => {
             const query = window.matchMedia("(prefers-color-scheme: dark)")
             query.addListener(() => {
