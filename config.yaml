@@ -1,6 +1,6 @@
 settings:
   title: 'RH - Status'
-  url: 'https://status.ronkkeli.app/' # used for Slack messages
+  url: 'https://status-page.eidam.dev' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 30 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -22,5 +22,5 @@ monitors:
     url: 'https://game-1-status.ronkkeli.app/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
-    linkable: false;
+  
  
