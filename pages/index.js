@@ -48,7 +48,11 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         <link rel="stylesheet" href="./style.css" />
         <script>
           {`
-         
+          function setTheme(theme) {
+            document.documentElement.classList.remove("dark", "light")
+            document.documentElement.classList.add(theme)
+            localStorage.theme = theme
+          }
           (() => {
             const query = window.matchMedia("(prefers-color-scheme: dark)")
             query.addListener(() => {
@@ -86,15 +90,19 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
         })}
         <div className="flex flex-row justify-between mt-4 text-sm">
           <div>
-            
+            {' '}
+            <a href="https://workers.cloudflare.com/" target="_blank">
+              {' '}
             </a>
-            
-            
+            &{' '}
+            <a href="https://flareact.com/" target="_blank">
+              {' '}
             </a>
           </div>
           <div>
             <a
-              
+              href="https://github.com/eidam/cf-workers-status-page"
+              target="_blank"
             >
               
             </a>
