@@ -22,5 +22,5 @@ monitors:
     url: 'https://game-1-status.ronkkeli.app/' # URL to fetch
     method: GET # default=GET
     expectStatus: 200 # operational status, default=200
-  
+    linkable: false;
  
