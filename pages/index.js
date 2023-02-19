@@ -7,7 +7,7 @@ import config from '../config.yaml'
 import MonitorCard from '../src/components/monitorCard'
 import MonitorFilter from '../src/components/monitorFilter'
 import MonitorStatusHeader from '../src/components/monitorStatusHeader'
-import ThemeSwitcher from '../src/components/themeSwitcher'
+
 
 const MonitorStore = new Store({
   monitors: config.monitors,
