@@ -7,7 +7,7 @@
 
 @layer base {
   body {
-    @apply bg-black text-gray-500 dark:bg-black dark:text-gray-800;
+    @apply bg-black text-gray-700 dark:bg-gray-800 dark:text-gray-50;
   
   }
 
