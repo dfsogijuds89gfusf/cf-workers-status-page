@@ -1,5 +1,5 @@
 settings:
-  title: 'RH - Status'
+  title: 'Ronkkeli Hosting Service Status'
   url: 'https://status.ronkkeli.app/' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 30 # number of days you want to display in histogram
