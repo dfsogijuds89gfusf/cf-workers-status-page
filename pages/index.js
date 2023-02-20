@@ -23,7 +23,6 @@ const filterByTerm = (term) =>
   }))
 
 export async function getEdgeProps() {
-  // get KV data
   const kvMonitors = await getKVMonitors()
 
   return {
@@ -32,7 +31,6 @@ export async function getEdgeProps() {
       kvMonitors: kvMonitors ? kvMonitors.monitors : {},
       kvMonitorsLastUpdate: kvMonitors ? kvMonitors.lastUpdate : {},
     },
-    // Revalidate these props once every x seconds
     revalidate: 5,
   }
 }
@@ -70,7 +68,7 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
       <div className="container mx-auto px-4">
         <div className="flex flex-row justify-between items-center p-4">
           <div className="flex flex-row items-center">
-            <img className="h-8 w-auto" src={config.settings.logo} />
+            <img className="h-8 w-auto hidden" src={config.settings.logo} />
             <h1 style={{ color: 'pink' }} className="ml-4 text-3xl">{config.settings.title}</h1>
           </div>
           <div className="flex flex-row items-center">
