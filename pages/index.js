@@ -1,30 +1,30 @@
-import { Store } from 'laco'
-import { useStore } from 'laco-react'
-import Head from 'flareact/head'
+import { Store } from 'laco';
+import { useStore } from 'laco-react';
+import Head from 'flareact/head';
 
-import { getKVMonitors, useKeyPress } from '../src/functions/helpers'
-import config from '../config.yaml'
-import MonitorCard from '../src/components/monitorCard'
-import MonitorFilter from '../src/components/monitorFilter'
-import MonitorStatusHeader from '../src/components/monitorStatusHeader'
-import ThemeSwitcher from '../src/components/themeSwitcher'
+import { getKVMonitors, useKeyPress } from '../src/functions/helpers';
+import config from '../config.yaml';
+import MonitorCard from '../src/components/monitorCard';
+import MonitorFilter from '../src/components/monitorFilter';
+import MonitorStatusHeader from '../src/components/monitorStatusHeader';
+import ThemeSwitcher from '../src/components/themeSwitcher';
 
 const MonitorStore = new Store({
   monitors: config.monitors,
   visible: config.monitors,
   activeFilter: false,
-})
+});
 
 const filterByTerm = (term) =>
   MonitorStore.set((state) => ({
     visible: state.monitors.filter((monitor) =>
-      monitor.name.toLowerCase().includes(term),
+      monitor.name.toLowerCase().includes(term)
     ),
-  }))
+  }));
 
 export async function getEdgeProps() {
   // get KV data
-  const kvMonitors = await getKVMonitors()
+  const kvMonitors = await getKVMonitors();
 
   return {
     props: {
@@ -33,21 +33,27 @@ export async function getEdgeProps() {
       kvMonitorsLastUpdate: kvMonitors ? kvMonitors.lastUpdate : {},
     },
     revalidate: 5,
-  }
+  };
 }
 
-export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
-  const state = useStore(MonitorStore)
-  const slash = useKeyPress('/')
+export default function Index({
+  config,
+  kvMonitors,
+  kvMonitorsLastUpdate,
+}) {
+  const state = useStore(MonitorStore);
+  const slash = useKeyPress('/');
 
-  
+  return (
+    <div>
       <div className="container mx-auto px-4">
         <div className="flex flex-row justify-between items-center p-4">
           <div className="flex flex-row items-center">
             <img className="h-8 w-auto" src={config.settings.logo} />
-            <h1 style="color:indigo;" className="ml-4 text-3xl">{config.settings.title}</h1>
+            <h1 style={{ color: 'indigo' }} className="ml-4 text-3xl">
+              {config.settings.title}
+            </h1>
           </div>
-          
         </div>
         <MonitorStatusHeader kvMonitorsLastUpdate={kvMonitorsLastUpdate} />
         {state.visible.map((monitor, key) => {
@@ -57,29 +63,26 @@ export default function Index({ config, kvMonitors, kvMonitorsLastUpdate }) {
               monitor={monitor}
               data={kvMonitors[monitor.id]}
             />
-          )
+          );
         })}
         <div className="flex flex-row justify-between mt-4 text-sm">
           <div>
             {' '}
             <a href="https://ronkkeli.com" target="_blank">
-              {' '}
+              {''}
             </a>
             {' '}
             <a href="https://ronkkeli.com" target="_blank">
-              {' '}
+              {''}
             </a>
           </div>
           <div>
-            <a
-              href="https://ronkkeli.com"
-              target="_blank"
-            >
-              
+            <a href="https://ronkkeli.com" target="_blank">
+              {''}
             </a>
           </div>
         </div>
       </div>
     </div>
-  )
+  );
 }
