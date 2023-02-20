@@ -51,7 +51,7 @@ export default function Index({
         <div className="flex flex-row justify-between items-center p-4">
           <div className="flex flex-row items-center">
             <img className="h-8 w-auto" src={config.settings.logo} />
-            <h1 style={{ color: 'indigo' }} className="ml-4 text-3xl">
+            <h1 className="ml-4 text-3xl">
               {config.settings.title}
             </h1>
           </div>
