@@ -21,7 +21,7 @@
 
 @layer components {
   .card {
-    @apply p-4 bg-gray-700 border-gray-600 shadow rounded-lg p-4 mb-2 dark:bg-gray-700 dark:border-gray-600 shadow rounded-lg p-4 mb-2;
+    @apply p-4 bg-black border-gray-600 shadow rounded-lg p-4 mb-2 dark:bg-black dark:border-gray-600 shadow rounded-lg p-4 mb-2;
   }
 
   .pill {
@@ -59,7 +59,7 @@
     @apply bg-yellow-400 dark:bg-yellow-700;
   }
   .h-5 mx-auto {
-    display: none
+    display: none;
      
   }
   .tooltip {
